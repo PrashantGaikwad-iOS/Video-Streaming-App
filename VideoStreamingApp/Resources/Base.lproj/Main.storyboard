@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VideoStreamingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zfc-sF-loy">
+                                <rect key="frame" x="0.0" y="20" width="667" height="355"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="videoCell" rowHeight="200" id="uCG-Wj-Fad">
+                                        <rect key="frame" x="0.0" y="28" width="667" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uCG-Wj-Fad" id="jef-cY-RUM">
+                                            <rect key="frame" x="0.0" y="0.0" width="667" height="199.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AUI-PI-iOM">
+                                                    <rect key="frame" x="25" y="21" width="260" height="160"/>
+                                                    <color key="backgroundColor" red="0.4941176471" green="0.49019607840000001" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="260" id="WY6-DT-wdV"/>
+                                                        <constraint firstAttribute="height" constant="160" id="nep-8m-taU"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6l-Om-ejV">
+                                                    <rect key="frame" x="293" y="19" width="359" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="U90-Rt-tHL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SbM-dd-23M">
+                                                    <rect key="frame" x="293" y="57" width="359" height="122"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SbM-dd-23M" firstAttribute="leading" secondItem="AUI-PI-iOM" secondAttribute="trailing" constant="8" id="49H-b2-qfX"/>
+                                                <constraint firstItem="SbM-dd-23M" firstAttribute="top" secondItem="W6l-Om-ejV" secondAttribute="bottom" constant="8" id="BPe-cG-6yv"/>
+                                                <constraint firstItem="W6l-Om-ejV" firstAttribute="trailing" secondItem="jef-cY-RUM" secondAttribute="trailingMargin" id="IFv-DJ-bbc"/>
+                                                <constraint firstItem="W6l-Om-ejV" firstAttribute="top" secondItem="jef-cY-RUM" secondAttribute="topMargin" constant="8" id="Orn-rx-s9g"/>
+                                                <constraint firstItem="W6l-Om-ejV" firstAttribute="leading" secondItem="AUI-PI-iOM" secondAttribute="trailing" constant="8" id="VpK-WS-ssJ"/>
+                                                <constraint firstItem="SbM-dd-23M" firstAttribute="trailing" secondItem="jef-cY-RUM" secondAttribute="trailingMargin" id="dbb-Uj-CEY"/>
+                                                <constraint firstItem="AUI-PI-iOM" firstAttribute="leading" secondItem="jef-cY-RUM" secondAttribute="leadingMargin" constant="10" id="hNB-bp-J1e"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="SbM-dd-23M" secondAttribute="bottom" constant="10" id="uyv-XH-E7n"/>
+                                                <constraint firstItem="AUI-PI-iOM" firstAttribute="top" secondItem="jef-cY-RUM" secondAttribute="topMargin" constant="10" id="zGf-6t-Dd6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="f2L-B3-Y3F"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xxN-SJ-5J2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zfc-sF-loy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5x5-a2-TLi"/>
+                            <constraint firstItem="Zfc-sF-loy" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="BPJ-A2-FmG"/>
+                            <constraint firstItem="Zfc-sF-loy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Toy-J7-bRh"/>
+                            <constraint firstItem="Zfc-sF-loy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="crg-us-OcK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="videosTableView" destination="Zfc-sF-loy" id="URf-pa-61Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.18140929535232" y="132"/>
+        </scene>
+    </scenes>
+</document>
